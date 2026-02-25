@@ -16,6 +16,7 @@
 body {
     background-color: var(--nice-black);
     color: var(--army-green);
+    overflow-x: hidden;
 }
 
 h1 {
@@ -57,29 +58,20 @@ h1 {
     width: 40%;
 }
 
+.nav {
+    z-index: 9000;
+    background-color: var(--nice-black);
+}
 
 /*unknowns*/
 
 .track-data {
     display: flex;
     align-items: center;
+
 }
 
 
 a .active {
     background-color: var(--birght-orange);
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    overflow-y: auto;
-}
-
-.wrapper>div {
-    border: 2px solid var(--plain-pale);
-    border-radius: 5px;
-    background: #E2E8CE80;
 }
