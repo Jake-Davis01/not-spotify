@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./Styles/settings-style.css" />
   </head>
   <body>
+    <!-- Search Bar -->
     <form class="center">
       <input
         type="text"
@@ -25,24 +26,9 @@
         id="settings-search"
       />
     </form>
-    <section id="settings-options">
-      <div class="settings-tiers">
-        <ul class="tier-1">
-          <li>Account</li>
-          <li>Premium</li>
-          <li>Social</li>
-        </ul>
-        <ul class="tier-2">
-          <li>Notifications</li>
-          <li>Security</li>
-        </ul>
-        <ul class="tier-3">
-          <li>Change Password</li>
-        </ul>
-      </div>
-    </section>
 
-    <div class="accordion" id="accordionExample">
+    <!-- Acordian section -->
+    <div class="accordion text-center" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button
@@ -51,25 +37,16 @@
             data-bs-toggle="collapse"
             data-bs-target="#collapseOne"
             aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Account
-          </button>
+            aria-controls="collapseOne">Account</button>
         </h2>
         <div
           id="collapseOne"
           class="accordion-collapse collapse show"
-          data-bs-parent="#accordionExample"
-        >
+          data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <strong>This is the first item’s accordion body.</strong> It is
-            shown by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It’s also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+            <button onclick="passwordInput()" class="settingSubOption">Change Password</button>
+            <button onclick="premiumOptions()" class="settingSubOption">Premium</button>
+            <button onclick="notificationOptions()" class="settingSubOption">Notifications</button>
           </div>
         </div>
       </div>
@@ -81,25 +58,15 @@
             data-bs-toggle="collapse"
             data-bs-target="#collapseTwo"
             aria-expanded="false"
-            aria-controls="collapseTwo"
-          >
-            Playlists
-          </button>
+            aria-controls="collapseTwo">Playlists</button>
         </h2>
         <div
           id="collapseTwo"
           class="accordion-collapse collapse"
-          data-bs-parent="#accordionExample"
-        >
+          data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <strong>This is the second item’s accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It’s also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+              <button onclick="genericOptionsAlert()" class="settingSubOption">Create New Playlist</button>
+              <button onclick="genericOptionsAlert()" class="settingSubOption">View Playlists</button>
           </div>
         </div>
       </div>
@@ -122,29 +89,14 @@
           data-bs-parent="#accordionExample"
         >
           <div class="accordion-body">
-            <strong>This is the third item’s accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It’s also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+            <button onclick="genericOptionsAlert()" class="settingSubOption">View Friends</button>
+            <button onclick="genericOptionsAlert()" class="settingSubOption">View Artists Followed</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="collapse multi-collapse" id="multiCollapseExample3">
-        <div class="card card-body">
-          <button>Change Password</button>
-          <button>Premium</button>
-          <button>Notifications</button>
-        </div>
-      </div>
-    </div>
-
+    <!-- "Music Player" graphic-->
     <section id="music-player">
       <p class="song-name">Song Name</p>
       <p class="artist-name">Artist Name</p>
@@ -155,24 +107,40 @@
       </div>
     </section>
 
-    <nav class="nav nav-pills flex-column flex-sm-row" id="bottom-nav">
+
+    <!-- Nav buttons at bottom of screen -->
+    <nav class="nav nav-pills flex-row justify-content-between flex-sm-row" id="bottom-nav">
       <a
-        class="flex-sm-fill text-sm-center nav-link active"
-        aria-current="page"
+        class="flex-sm-fill text-sm-center nav-link"
         href="#"
         ><img src="./icons/Home.png" alt="home"
       /></a>
       <a class="flex-sm-fill text-sm-center nav-link" href="#"
-        ><img src="./icons/Search.png" alt=""
+        ><img src="./icons/Search.png" alt="search"
       /></a>
       <a class="flex-sm-fill text-sm-center nav-link" href="#"
-        ><img src="./icons/Book.png" alt=""
+        ><img src="./icons/Book.png" alt="playlists"
       /></a>
-      <a
-        class="flex-sm-fill text-sm-center nav-link disabled"
-        aria-disabled="true"
-        ><img src="./icons/account_circle.png" alt=""
-      /></a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="#"><img src="./icons/account_circle.png" alt="account"/></a>
     </nav>
   </body>
+
+  <!-- Script section-->
+   <script>
+      function passwordInput() {
+        prompt("Enter new password:");
+      }
+
+      function premiumOptions() {
+        alert("Premium options coming soon!");
+      }
+
+      function notificationOptions() {
+        alert("Notification settings coming soon!");
+      }
+
+      function genericOptionsAlert() {
+        alert("This feature is coming soon!");
+      }
+   </script>
 </html>
