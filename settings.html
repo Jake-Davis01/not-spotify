@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="settings-style.css" />
+  </head>
+  <body>
+    <form class="center">
+      <input
+        type="text"
+        placeholder="Search Settings 🔎"
+        id="settings-search"
+      />
+    </form>
+    <section id="settings-options">
+      <div class="settings-tiers">
+        <ul class="tier-1">
+          <li>Account</li>
+          <li>Premium</li>
+          <li>Social</li>
+        </ul>
+        <ul class="tier-2">
+          <li>Notifications</li>
+          <li>Security</li>
+        </ul>
+        <ul class="tier-3">
+          <li>Change Password</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Account
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the first item’s accordion body.</strong> It is
+            shown by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It’s also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            Playlists
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the second item’s accordion body.</strong> It is
+            hidden by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It’s also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            Social
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is
+            hidden by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It’s also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="collapse multi-collapse" id="multiCollapseExample3">
+        <div class="card card-body">
+          <button>Change Password</button>
+          <button>Premium</button>
+          <button>Notifications</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="music-player">
+      <p class="song-name">Song Name</p>
+      <p class="artist-name">Artist Name</p>
+      <div class="music-player-details">
+        <img src="./icons/Music.png" alt="music symbol" />
+        <img src="./icons/progress-bar.png" alt="song progress bar" />
+        <img src="./icons/Play circle.png" alt="music player controls" />
+      </div>
+    </section>
+
+    <nav class="nav nav-pills flex-column flex-sm-row" id="bottom-nav">
+      <a
+        class="flex-sm-fill text-sm-center nav-link active"
+        aria-current="page"
+        href="#"
+        ><img src="./icons/Home.png" alt="home"
+      /></a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="#"
+        ><img src="./icons/Search.png" alt=""
+      /></a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="#"
+        ><img src="./icons/Book.png" alt=""
+      /></a>
+      <a
+        class="flex-sm-fill text-sm-center nav-link disabled"
+        aria-disabled="true"
+        ><img src="./icons/account_circle.png" alt=""
+      /></a>
+    </nav>
+  </body>
+</html>
