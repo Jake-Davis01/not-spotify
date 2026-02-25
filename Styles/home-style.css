@@ -1,0 +1,85 @@
+/* global */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --nice-black: #262626;
+    --plain-pale: #E2E8CE;
+    --army-green: #ACBFA4;
+    --birght-orange: #FF7F11;
+    --other-black: #000000;
+    scroll-behavior: smooth;
+}
+
+/* lay out */
+body {
+    background-color: var(--nice-black);
+    color: var(--army-green);
+}
+
+h1 {
+    color: var(--birght-orange);
+}
+
+
+
+
+/* compnents */
+.card {
+    background-color: var(--plain-pale);
+
+
+}
+
+.music-player {
+    display: flex;
+    background-color: var(--other-black);
+    justify-content: space-around;
+    border-radius: 16px;
+
+}
+
+.btn {
+    background-color: var(--plain-pale);
+    border-color: var(--plain-pale);
+    opacity: 0.5;
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+}
+
+.carousel-item img {
+    max-width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+
+/*unknowns*/
+
+.track-data {
+    display: flex;
+    align-items: center;
+}
+
+
+a .active {
+    background-color: var(--birght-orange);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    overflow-y: auto;
+}
+
+.wrapper>div {
+    border: 2px solid var(--plain-pale);
+    border-radius: 5px;
+    background: #E2E8CE80;
+}
